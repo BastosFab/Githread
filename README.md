@@ -25,6 +25,17 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 npx prisma migrate dev
 ```
 
+### Generate seed:
+
+```bash
+npm run prisma:seed
+```
+
+See all Model with prisma command
+```bash
+npx prisma studio
+```
+
 
 ## .Env
 
@@ -39,8 +50,10 @@ GITHUB_SECRET="your_github_secret"
 
 To get your Github ID and Secret, you need to create a Github OAuth App [here](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app).
 
-After creating .env file, you need to run the following command to create the database:
+After creating .env file, you need to run the following command to reload the project :
 
 ```bash
 npm run dev
 ```
+
+
