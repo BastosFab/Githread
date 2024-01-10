@@ -18,9 +18,9 @@ export const Post = ({post}: PostProps) => {
             <button>
                 <Heart size={20} className='hover:stroke-red-400'/>
             </button>
-            <button>
+            <Link href={`/posts/${post.id}/reply`}>
                 <MessageCircle size={20} className='hover:stroke-gray-400'/>
-            </button>
+            </Link>
         </div>
         <div>
             <Link className="text-muted-foreground text-sm" href={`/posts/${post.id}`}>{post._count.likes} likes</Link>
