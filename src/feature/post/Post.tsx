@@ -3,6 +3,7 @@ import React from 'react'
 import { PostLayout } from './PostLayout';
 import Link from 'next/link';
 import { Heart, MessageCircle } from 'lucide-react';
+import { LikeButton } from './LikeButton';
 
 type PostProps = {
     post: PostHome
@@ -15,9 +16,7 @@ export const Post = ({post}: PostProps) => {
             {post.content}
         </Link>
         <div className='flex gap-2 items-center'>
-            <button>
-                <Heart size={20} className='hover:stroke-red-400'/>
-            </button>
+            <LikeButton postId={post.id} isLiked={post.likes.length > 0} />
             <Link href={`/posts/${post.id}/reply`}>
                 <MessageCircle size={20} className='hover:stroke-gray-400'/>
             </Link>

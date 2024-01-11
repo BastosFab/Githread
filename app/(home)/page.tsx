@@ -6,7 +6,9 @@ import React from 'react'
 
 export default async function Home() {
   const session = await getAuthSession();
-  const posts = await getLatestPosts();
+  const posts = await getLatestPosts(session?.user.id);
+
+  // await new Promise((r) => setTimeout(r, 5000));
 
   return (
     <div className='divide-y divide-muted'>
