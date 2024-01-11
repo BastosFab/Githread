@@ -38,3 +38,6 @@ next-env.d.ts
 # Migration files
 prisma/migrations
 
+# Environment variables
+.env
+
